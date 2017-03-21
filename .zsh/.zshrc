@@ -11,6 +11,9 @@ zplug "lib/completion", from:oh-my-zsh
 
 zplug "zsh-users/zsh-history-substring-search"
 
+# Also prezto
+zplug "sorin-ionescu/prezto", as:plugin, use:init.zsh, hook-build:"ln -s $ZPLUG_ROOT/repos/sorin-ionescu/prezto ${ZDOTDIR:-$HOME}/.zprezto"
+
 # Install plugins if there are plugins that have not been installed
 if ! zplug check; then
     zplug install
