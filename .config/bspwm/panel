@@ -16,7 +16,7 @@ currentTime() {
 
 bspc config top_padding $PANEL_HEIGHT
 bspc subscribe report > "$PANEL_FIFO" &
-xtitle -sf 'T%s\n' > "$PANEL_FIFO" &
+xtitle -sf 'T%s' > "$PANEL_FIFO" &
 
 # system info section (right side)
 while true; do

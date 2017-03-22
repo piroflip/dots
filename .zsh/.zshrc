@@ -7,10 +7,6 @@ fi
 
 source ~/.zplug/init.zsh
 
-zplug "lib/completion", from:oh-my-zsh
-
-zplug "zsh-users/zsh-history-substring-search"
-
 # Also prezto
 zplug "sorin-ionescu/prezto", as:plugin, use:init.zsh, hook-build:"ln -s $ZPLUG_ROOT/repos/sorin-ionescu/prezto ${ZDOTDIR:-$HOME}/.zprezto"
 
@@ -25,3 +21,7 @@ zplug load
 
 alias dots='git --git-dir=$HOME/.dots.git/ --work-tree=$HOME'
 alias tmux="tmux -f ${XDG_CONFIG_DIR:-${HOME}}/tmux.conf"
+alias vim='nvim'
+alias m='make'
+alias c='make clean'
+alias rb='make clean;make'

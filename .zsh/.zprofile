@@ -1,5 +1,8 @@
 #!/bin/env sh
 
+export EDITOR="nvim"
+export VISUAL="nvim"
+
 export XDG_DATA_HOME="${HOME}/.local/share"
 export XDG_RUNTIME_DIR="${HOME}/.local/run"
 export XDG_CACHE_HOME="${HOME}/.cache"
