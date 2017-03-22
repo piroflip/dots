@@ -20,7 +20,7 @@ zplug load
 
 
 alias dots='git --git-dir=$HOME/.dots.git/ --work-tree=$HOME'
-alias tmux="tmux -f ${XDG_CONFIG_DIR:-${HOME}}/tmux.conf"
+alias tmux="tmux -f ${XDG_CONFIG_HOME:-${HOME}}/.tmux.conf"
 alias vim='nvim'
 alias m='make'
 alias c='make clean'
