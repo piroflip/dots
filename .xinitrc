@@ -3,6 +3,8 @@
 #==============================
 xrdb -load ~/.Xresources
 
+setxkbmap -layout "us,ru(winkeys)" -option "" -option "grp:alt_shift_toggle,grp_led:scroll"
+
 # restore background image/settings
 if [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/setroot/.setroot-restore" ]; then
 	setroot --restore
