@@ -35,6 +35,7 @@ NeoBundle 'vcscommand.vim'
 NeoBundleLazy 'Shougo/vimfiler', {'autoload' : { 'commands' : ['VimFiler']}}
 " Autocompletion
 
+NeoBundle 'Shougo/deoplete.nvim'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'Shougo/vimshell'
@@ -514,6 +515,16 @@ nnoremap ` :<C-u>VimFiler -buffer-name=explorer -toggle -force-quit<cr>
 nmap <silent> vs :<C-u>VimShell<CR>
 nmap <silent> vp :<C-u>VimShellPop<CR>
 nmap <C-@>  <Plug>(vimshell_switch)
+" }}}
+" deoplete {{{
+
+let g:deoplete#enable_at_startup = 1   "enable deoplete at vim startup
+let g:deoplete#enable_ignore_case = 1  "let matcher ignore case
+let g:deoplete#enable_smart_case = 1   "smart case
+inoremap <expr><C-h> deolete#mappings#smart_close_popup()."\<C-h>"
+inoremap <expr><BS> deoplete#mappings#smart_close_popup()."\<C-h>"
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+
 " }}}
 " Neosnippet {{{
 " Plugin key-mappings.
