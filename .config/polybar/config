@@ -1,0 +1,56 @@
+;
+; this config is written for an unreleased version (polybar "wip-lemonbar" branch)
+; it might need some tweaking to run on the latest released version... try for yourself
+;
+
+
+[bar/top]
+monitor = DP-1
+width = 100%
+height = 12
+
+background = #333232
+foreground = #a7a5a5
+
+font-0 = xos4 Terminess Powerline:style=Regular;2
+; font-1 = Wuncon Siji:pixelsize=10;-2
+; font-2 = Misc Termsyn:size=8;-2
+
+modules-left = bspwm
+modules-center = title
+modules-right = date
+
+
+[module/bspwm]
+type = internal/bspwm
+format = <label-state> <label-mode>
+
+ws-icon-default = x
+
+label-focused = %index%
+label-focused-background = #144b6c
+label-focused-foreground = #b1d0e8
+label-focused-padding = 1
+
+label-occupied = %index%
+label-occupied-padding = 1
+label-occupied-foreground = #7c70da
+
+label-urgent = %index%!
+label-urgent-background = #bd2c40
+label-urgent-padding = 1
+
+label-empty = %index%
+label-empty-foreground = #a7a5a5
+label-empty-padding = 1
+
+[module/title]
+type = internal/xwindow
+
+[module/date]
+type = internal/date
+;date = %{T3}%%{F#66c6b8e6}%{F#ccd8d4e6} %Y-%m-%d  %%{F#fba922}%%{F#ccd8d4e6} %H:%M%%{T-}
+date = %%{F#66c6b8e6} %Y-%m-%d  %%{F#fba922} %H:%M
+interval = 5
+
+; vim:ft=dosini
