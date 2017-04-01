@@ -129,8 +129,11 @@ super + y
 	slimlock
 
 # volume control
-super + {F12,F11,F10}
-    amixer set Master {5%+,5%-,100%-}
+super + F10
+    amixer set Master 100%-
+
+super + {F12,F11}
+    amixer -q -c 0 set Master playback 1dB{+,-}
 
 super + r
 	rofi -show run

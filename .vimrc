@@ -29,6 +29,7 @@ call neobundle#begin(expand($HOME.'/.vim/bundle/'))
 NeoBundle 'Shougo/neobundle.vim'
 " }}}
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/denite.nvim'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'vcscommand.vim'
 " File explorer (needed where ranger is not available)

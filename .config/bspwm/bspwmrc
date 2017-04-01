@@ -20,4 +20,10 @@ bspc rule -a VirtualBox             floating=on
 bspc rule -a pavucontrol            floating=on
 bspc rule -a nitrogen               floating=on center=true
 
-${HOME}/.config/bspwm/panel
+if [ -s "$HOME/.fehbg" ]; then
+  source "$HOME/.fehbg" 2>/dev/null
+elif [ -e "$HOME/.wallpapers/1.jpg" ]; then
+  feh --bg-center --image-bg black "$HOME/.wallpapers/1.jpg"
+fi
+
+${HOME}/.config/polybar/launch.sh
