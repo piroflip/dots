@@ -34,7 +34,7 @@ xsetroot -cursor_name left_ptr &
 unclutter -idle 1 &
 
 # redshift; better options at this point than xflux
-#redshift -c ~/.config/redshift.conf &
+redshift &
 # }}}
 
 #==============================
