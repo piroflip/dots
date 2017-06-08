@@ -1,5 +1,7 @@
 #!/bin/env sh
 
+export TZ=:/etc/localtime
+
 export EDITOR="nvim"
 export VISUAL="nvim"
 
@@ -26,3 +28,6 @@ path_prepend() {
 
 unset dir
 unset -f path_prepend
+
+
+export MP_FULLNAME="Alexander Kotov"

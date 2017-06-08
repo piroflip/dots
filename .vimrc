@@ -42,6 +42,7 @@ NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'Shougo/vimshell'
 
 NeoBundle 'AutoFenc'
+NeoBundle 'scrooloose/nerdcommenter'
 
 call neobundle#config('vimshell', {
       \ 'lazy' : 1,
@@ -138,6 +139,8 @@ au FocusLost * :silent! wall
 " Leader
 let mapleader = ","
 let maplocalleader = "\\"
+
+" Г
 
 " Cursorline {{{
 " Only show cursorline in the current window and in normal mode.
