@@ -24,3 +24,13 @@ alias vim='nvim'
 alias m='make'
 alias c='make clean'
 alias rb='make clean;make'
+
+# Subversion aliases
+alias sl="svn log"
+alias ss="svn status"
+alias sc="svn commit"
+alias su="svn update"
+alias sd="svn diff"
+alias sdl="svn diff | less"
+alias sstash="svn diff > _svn-diff.txt | svn revert -R ."
+alias sstashpop="patch -p0 -i _svn-diff.txt && rm -rf _svn-diff.txt"

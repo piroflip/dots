@@ -11,7 +11,7 @@ trap 'trap - TERM; kill 0' INT TERM QUIT EXIT
 mkfifo "$PANEL_FIFO"
 
 currentTime() {
-	echo "$(date +'%a %d %I: %M%P')"
+	echo "$(date +'%Y-%m-%d, %H:%M')"
 }
 
 bspc config top_padding $PANEL_HEIGHT

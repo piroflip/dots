@@ -41,6 +41,8 @@ NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'Shougo/vimshell'
 
+NeoBundle 'AutoFenc'
+
 call neobundle#config('vimshell', {
       \ 'lazy' : 1,
       \ 'autoload' : {
@@ -195,7 +197,7 @@ augroup END
 " }}}
 " Encoding {{{
 " Choosing current buffer encoding
-set fileencodings=cp866,utf-8,cp1251,koi8-r
+set fileencodings=utf-8,cp866,cp1251,koi8-r
 " menu Encoding.koi8-r :e ++enc=koi8-r ++ff=unix<CR>
 menu Encoding.utf-8 :e ++enc=utf8<CR>
 menu Encoding.windows-1251 :e ++enc=cp1251 ++ff=dos<CR>
@@ -545,6 +547,9 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 if has('conceal')
   set conceallevel=2 concealcursor=niv
 endif
+" }}}
+" AutoFenc {{{
+let g:autofenc_ext_prog_args = '-i -L russian'
 " }}}
 " }}}
 
