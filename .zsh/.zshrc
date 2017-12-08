@@ -34,3 +34,12 @@ alias sd="svn diff"
 alias sdl="svn diff | less"
 alias sstash="svn diff > _svn-diff.txt | svn revert -R ."
 alias sstashpop="patch -p0 -i _svn-diff.txt && rm -rf _svn-diff.txt"
+
+
+insf() {
+    ./vm umountflash "$@"; ./vm insertflash "$@"
+}
+
+remf() {
+    ./vm removeflash "$@"; ./vm mountflash "$@"
+}

@@ -12,6 +12,8 @@ export XDG_RUNTIME_DIR="${HOME}/.local/run"
 export XDG_CACHE_HOME="${HOME}/.cache"
 export XDG_CONFIG_HOME="${HOME}/.config"
 
+export LESS_TERMCAP_usz=$'\C-[[0m'
+
 # Update PATH
 path_prepend() {
   case ":$PATH:" in

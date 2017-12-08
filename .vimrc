@@ -514,7 +514,7 @@ nnoremap [unite]n :Unite -buffer-name=mru -default-action=lcd neomru/directory<C
 " }}}
 " VimFiler {{{
 nnoremap [unite]d :VimFilerBufferDir -buffer-name=explorer -simple -toggle -force-quit<cr>
-nnoremap ` :<C-u>VimFiler -buffer-name=explorer -toggle -force-quit<cr>
+nnoremap [unite]f :<C-u>VimFiler -buffer-name=explorer -toggle -force-quit<cr>
 
 " }}}
 " VimShell {{{
