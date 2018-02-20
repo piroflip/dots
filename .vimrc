@@ -440,6 +440,11 @@ au BufNewFile,BufRead *vimperatorrc*,*.vimp setfiletype vim
 
 " }}}
 " Plugin settings --------------------------------------------------------- {{{
+" VCSCommand {{{
+
+let VCSCommandMapPrefix='<leader>v'
+
+" }}}
 " Ack {{{
 
 nnoremap <leader>a :Ack!<space>
@@ -448,7 +453,8 @@ let g:ackprg = '/usr/bin/vendor_perl/ack --smart-case --nogroup --nocolor --colu
 " }}}
 " NERDCommenter {{{
 
-let g:NERDCreateDefaultMappings = 0
+let g:NERDCreateDefaultMappings = 1
+let g:NERDDefaultAlign = 'left'
 
 let NERDSpaceDelims=1
 let g:NERDCustomDelimiters = {
